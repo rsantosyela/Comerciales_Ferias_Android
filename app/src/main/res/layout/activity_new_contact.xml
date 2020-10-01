@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewContactActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Nombre"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/name_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/name_edit_text" />
+
+    <TextView
+        android:id="@+id/email_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Email"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/name_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/name_edit_text" />
+
+    <TextView
+        android:id="@+id/phone_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Teléfono"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/email_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/email_edit_text" />
+
+    <TextView
+        android:id="@+id/fair_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Feria"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/phone_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/phone_edit_text" />
+
+    <EditText
+        android:id="@+id/name_edit_text"
+        android:layout_width="500sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.120000005" />
+
+    <EditText
+        android:id="@+id/email_edit_text"
+        android:layout_width="500sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/email_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/email_text_view" />
+
+    <EditText
+        android:id="@+id/phone_edit_text"
+        android:layout_width="500sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/phone_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/phone_text_view" />
+
+    <EditText
+        android:id="@+id/fair_edit_text"
+        android:layout_width="500sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/fair_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/fair_text_view" />
+
+    <TextView
+        android:id="@+id/legal_warning_text_view"
+        android:layout_width="0dp"
+        android:layout_height="70sp"
+        android:layout_marginTop="8dp"
+        android:text="texto_legal"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/fair_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/fair_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/fair_edit_text" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="250dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="16dp"
+        android:text="GUARDAR"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="@+id/terms_check_box"
+        app:layout_constraintStart_toStartOf="@+id/terms_check_box"
+        app:layout_constraintTop_toBottomOf="@+id/terms_check_box" />
+
+    <CheckBox
+        android:id="@+id/terms_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Acepto los términos y condiciones"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/legal_warning_text_view"
+        app:layout_constraintStart_toStartOf="@+id/legal_warning_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/legal_warning_text_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>
