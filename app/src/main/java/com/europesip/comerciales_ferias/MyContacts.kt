@@ -32,6 +32,7 @@ class MyContacts : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowHomeEnabled(true)
+        supportActionBar!!.setTitle(intent.getStringExtra("title"))
 
         // List view adapter
         myContactsListView.adapter = MyContactsCustomAdapter(this)
@@ -40,11 +41,11 @@ class MyContacts : AppCompatActivity() {
         myContactsListView.setOnItemClickListener { parent, view, position, id ->
 
             // Item position
-            val itemPosition = position
+            // val itemPosition = position
 
             // Test intent
-            val intent = Intent(this, MenuActivity::class.java)
-            startActivity(intent)
+            // val intent = Intent(this, MenuActivity::class.java)
+            // startActivity(intent)
         }
     }
 
@@ -55,7 +56,7 @@ class MyContacts : AppCompatActivity() {
     }
 
     // Custom adapter needed to build list view contents
-    private class MyContactsCustomAdapter(context: Context): BaseAdapter() {
+    public class MyContactsCustomAdapter(context: Context): BaseAdapter() {
 
         private val mContext: Context = context
         // Test array

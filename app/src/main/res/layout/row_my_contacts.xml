@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="45dp">
+    android:paddingBottom="21dp"
+    android:paddingTop="1dp">
 
     <TextView
         android:id="@+id/contact_name_text_view"
@@ -13,8 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
         android:layout_marginLeft="45dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="16dp"
         android:text="contact_name"
+        android:textColor="@android:color/background_dark"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

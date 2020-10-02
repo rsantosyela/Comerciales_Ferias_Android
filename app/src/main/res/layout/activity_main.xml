@@ -13,6 +13,7 @@
         android:layout_marginBottom="8dp"
         android:text="Email"
         android:textSize="30sp"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/email_edit_text"
         app:layout_constraintStart_toStartOf="@+id/email_edit_text" />
 
@@ -23,6 +24,7 @@
         android:layout_marginTop="32dp"
         android:text="Contraseña"
         android:textSize="30sp"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/email_edit_text"
         app:layout_constraintTop_toBottomOf="@+id/email_edit_text" />
 

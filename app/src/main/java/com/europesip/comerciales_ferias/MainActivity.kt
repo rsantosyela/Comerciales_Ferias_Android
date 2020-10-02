@@ -9,9 +9,9 @@ import android.widget.EditText
 class MainActivity : AppCompatActivity() {
 
     //Variables
-    private var emailEditText: EditText? = null
-    private var passwordEditText: EditText? = null
-    private var loginButton: Button? = null
+    private lateinit var emailEditText: EditText
+    private lateinit var passwordEditText: EditText
+    private lateinit var loginButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         loginButton?.setOnClickListener {
             val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
+
+            finish();
+
         }
     }
 }

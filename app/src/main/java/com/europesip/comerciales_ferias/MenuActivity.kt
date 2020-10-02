@@ -33,12 +33,14 @@ class MenuActivity : AppCompatActivity() {
         //New contact button click
         newContactButton.setOnClickListener {
             val intent = Intent(this, NewContactActivity::class.java)
+            intent.putExtra("accept_terms", false)
             startActivity(intent)
         }
 
         //My contacts button click
         myContactsButton.setOnClickListener {
             val intent = Intent(this, MyContacts::class.java)
+            intent.putExtra("title", "Contactos de " + "Mac Pro")
             startActivity(intent)
         }
 
