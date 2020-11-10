@@ -6,6 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:indeterminate="true" />
+
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/email_text_view"
         android:layout_width="wrap_content"
@@ -15,7 +32,8 @@
         android:textSize="30sp"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/email_edit_text"
-        app:layout_constraintStart_toStartOf="@+id/email_edit_text" />
+        app:layout_constraintStart_toStartOf="@+id/email_edit_text"
+        android:focusedByDefault="false"/>
 
     <TextView
         android:id="@+id/password_text_view"
@@ -30,15 +48,22 @@
 
     <Button
         android:id="@+id/login_button"
-        android:layout_width="215dp"
+        android:layout_width="match_parent"
         android:layout_height="85dp"
-        android:layout_marginTop="32dp"
-        android:text="LOGIN"
+        android:text="INICIAR SESIÓN"
         android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_edit_text" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        tools:ignore="MissingConstraints" />
+
 
     <EditText
         android:id="@+id/email_edit_text"
@@ -64,5 +89,17 @@
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/password_text_view"
         app:layout_constraintTop_toBottomOf="@+id/password_text_view" />
+
+    <TextView
+        android:id="@+id/warningtextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Inicio de sesión fallido, revise sus credenciales y conexión a internet"
+        android:textColor="#F31313"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/password_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/password_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/password_edit_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

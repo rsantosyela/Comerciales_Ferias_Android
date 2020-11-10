@@ -1,7 +1,9 @@
 package com.europesip.comerciales_ferias
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.os.Debug
@@ -9,17 +11,37 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.ListView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_menu.view.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class MyContacts : AppCompatActivity() {
 
     // Variables
     private lateinit var myContactsListView: ListView
+    private lateinit var loadingpanel: RelativeLayout
+    public lateinit var clientnames: Array<String>
+    public lateinit var clientemails: Array<String>
+    public lateinit var clientphones: Array<Int>
+    public lateinit var clientids: Array<String>
+    public lateinit var fairnames: Array<String>
+    public lateinit var fairids: Array<String>
+    public lateinit var mcontext: Context
+
+
+
+    // RETROFIT
+    private lateinit var retrofit: Retrofit
+    private lateinit var service: ApiService
+
+    //LocalStroage
+    private lateinit var ls: LocalStorage
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,26 +49,38 @@ class MyContacts : AppCompatActivity() {
 
         // Initialized variables
         myContactsListView = findViewById(R.id.my_contacts_list_view)
+        loadingpanel = findViewById(R.id.loadingPanel)
+        ls = LocalStorage(this)
+        mcontext = this
 
+        val url: String = resources.getString(R.string.base_url_api)
+
+        retrofit = Retrofit.Builder()
+            .baseUrl(url)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        service = retrofit.create<ApiService>(ApiService::class.java)
         // Toolbar
         setSupportActionBar(findViewById(R.id.toolbar))
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowHomeEnabled(true)
         supportActionBar!!.setTitle(intent.getStringExtra("title"))
 
-        // List view adapter
-        myContactsListView.adapter = MyContactsCustomAdapter(this)
-
         // Set on item click
         myContactsListView.setOnItemClickListener { parent, view, position, id ->
 
-            // Item position
-            // val itemPosition = position
+            ls.setContact(clientnames[position],clientemails[position], clientphones[position], clientids[position], fairnames[position], fairids[position])
 
-            // Test intent
-            // val intent = Intent(this, MenuActivity::class.java)
-            // startActivity(intent)
+            val nextintent = Intent(this, SingleContactDetail::class.java)
+            startActivity(nextintent)
+
+
+
+
         }
+
+        setupdata()
     }
 
     // Function so the toolbar button makes a back press
@@ -56,14 +90,13 @@ class MyContacts : AppCompatActivity() {
     }
 
     // Custom adapter needed to build list view contents
-    public class MyContactsCustomAdapter(context: Context): BaseAdapter() {
+    public class MyContactsCustomAdapter(context: Context, var clientnames: Array<String>, var clientemails: Array<String>, var clientphones: Array<Int>,var fairnames: Array<String>): BaseAdapter() {
 
         private val mContext: Context = context
         // Test array
-        private val contacts = arrayListOf<String>("Contact 1", "Contact 2", "Contact 3", "Contact 4", "Contact 5", "Contact 6", "Contact 7")
 
         override fun getCount(): Int {
-            return contacts.size
+            return this.clientnames.size
         }
 
         override fun getItemId(position: Int): Long {
@@ -77,13 +110,106 @@ class MyContacts : AppCompatActivity() {
         @SuppressLint("ViewHolder")
         override fun getView(position: Int, convertView: View?, viewGroup: ViewGroup?): View {
             val layoutInflater = LayoutInflater.from(mContext)
-            val row = layoutInflater.inflate(R.layout.row_my_contacts, viewGroup, false)
+            val row = layoutInflater.inflate(R.layout.contactslistsadapter, viewGroup, false)
 
-            // Contact names
-            val contactNameTextView = row.findViewById<TextView>(R.id.contact_name_text_view)
-            contactNameTextView.text = contacts[position]
+            val nameTextView = row.findViewById<TextView>(R.id.textNombre)
+            nameTextView.text = clientnames[position]
+
+            val emailTextView = row.findViewById<TextView>(R.id.textEmail)
+            emailTextView.text = clientemails[position]
+
+            val fairTextView = row.findViewById<TextView>(R.id.textFair)
+            fairTextView.text = fairnames[position]
 
             return row
         }
     }
+
+
+    fun cantouch(yesno: Boolean){
+        myContactsListView.isEnabled = yesno
+
+        if (yesno){
+            loadingpanel.visibility = View.GONE
+        } else {
+            loadingpanel.isVisible = true
+        }
+
+
+    }
+
+    fun setupdata(){
+
+        cantouch(false)
+
+        service.getmyclients(ls.getToken()).enqueue(object : Callback<getmyclientsrs>{
+            override fun onResponse(
+                call: Call<getmyclientsrs>,
+                response: Response<getmyclientsrs>
+            ) {
+
+                if (response.code() == 200){
+
+                    clientnames = response.body()!!.clientnames
+                    clientemails = response.body()!!.clientemails
+                    clientphones = response.body()!!.clientphones
+                    clientids = response.body()!!.clientids
+                    fairnames = response.body()!!.fairnames
+                    fairids = response.body()!!.fairids
+
+                    setupadapter()
+                    cantouch(true)
+
+
+
+                } else if (response.code() == 401){
+
+                alerta("No hay ningún cliente creado por su usuario")
+                    //finish()
+
+                } else {
+
+                    alerta("Error de autenticidad")
+
+                    ls.removeToken()
+                    System.exit(0)
+
+
+                }
+
+
+            }
+
+            override fun onFailure(call: Call<getmyclientsrs>, t: Throwable) {
+                alerta("Error de conexion")
+            }
+
+        })
+
+
+    }
+
+    fun alerta(message: String){
+
+        AlertDialog.Builder(mcontext).setTitle("Atención").setMessage(message)
+            .setPositiveButton(
+                "Vale",
+                DialogInterface.OnClickListener { dialogInterface: DialogInterface, i: Int ->
+
+
+                }).setCancelable(false).show()
+
+    }
+
+    fun setupadapter(){
+
+        // List view adapter
+         myContactsListView.adapter = MyContactsCustomAdapter(mcontext,clientnames,clientemails,clientphones,fairnames)
+
+
+    }
+
+
 }
+
+

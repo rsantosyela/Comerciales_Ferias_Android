@@ -1,4 +1,8 @@
 <resources>
+
+
+    <string name="base_url_api">http://76613d8e8017.ngrok.io/api/user/</string>
+
     <string name="app_name">Comerciales_Ferias</string>
     <string name="title_activity_my_contacts">MyContacts</string>
     <!-- Strings used for fragments for navigation -->
@@ -9,4 +13,6 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
 </resources>

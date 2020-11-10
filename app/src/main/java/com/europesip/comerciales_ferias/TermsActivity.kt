@@ -6,11 +6,12 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 
-class TermsActivity : AppCompatActivity() {
+class TermsActivity() : AppCompatActivity() {
 
     lateinit var accept_button: Button;
     lateinit var deny_button: Button;
     lateinit var legal_text: TextView;
+    private lateinit var ls: LocalStorage
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +22,8 @@ class TermsActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowHomeEnabled(true)
+
+        ls = LocalStorage(this)
 
 
         var textolegal: String = " ALL WE DO HEAR FROM YOU IS BLAH BLAH BLAH SO ALL WE EVER DO IS GO JAJAJA, CAUSE IS JA JA JA JA JA BLAH BLAH BLAH BLAH.ALL WE DO HEAR FROM YOU IS BLAH BLAH BLAH SO ALL WE EVER DO IS GO JAJAJA, CAUSE IS JA JA JA JA JA BLAH BLAH BLAH BLAH.ALL WE DO HEAR FROM YOU IS BLAH BLAH BLAH SO ALL WE EVER DO IS GO JAJAJA, CAUSE IS JA JA JA JA JA BLAH BLAH BLAH BLAH.ALL WE DO HEAR FROM YOU IS BLAH BLAH BLAH SO ALL WE EVER DO IS GO JAJAJA, CAUSE IS JA JA JA JA JA BLAH BLAH BLAH BLAH.ALL WE DO HEAR FROM YOU IS BLAH BLAH BLAH SO ALL WE EVER DO IS GO JAJAJA, CAUSE IS JA JA JA JA JA BLAH BLAH BLAH BLAH.ALL WE DO HEAR FROM YOU IS BLAH BLAH BLAH SO ALL WE EVER DO IS GO JAJAJA, CAUSE IS JA JA JA JA JA BLAH BLAH BLAH BLAH.ALL WE DO HEAR FROM YOU IS BLAH BLAH BLAH SO ALL WE EVER DO IS GO JAJAJA, CAUSE IS JA JA JA JA JA BLAH BLAH BLAH BLAH.ALL WE DO HEAR FROM YOU IS BLAH BLAH BLAH SO ALL WE EVER DO IS GO JAJAJA, CAUSE IS JA JA JA JA JA BLAH BLAH BLAH BLAH.ALL WE DO HEAR FROM YOU IS BLAH BLAH BLAH SO ALL WE EVER DO IS GO JAJAJA, CAUSE IS JA JA JA JA JA BLAH BLAH BLAH BLAH.ALL WE DO HEAR FROM YOU IS BLAH BLAH BLAH SO ALL WE EVER DO IS GO JAJAJA, CAUSE IS JA JA JA JA JA BLAH BLAH BLAH BLAH.ALL WE DO HEAR FROM YOU IS BLAH BLAH BLAH SO ALL WE EVER DO IS GO JAJAJA, CAUSE IS JA JA JA JA JA BLAH BLAH BLAH BLAH."
@@ -34,16 +37,15 @@ class TermsActivity : AppCompatActivity() {
 
 
     deny_button.setOnClickListener {
-        val intent = Intent(this, NewContactActivity::class.java)
-        intent.putExtra("accept_terms", false)
-        startActivity(intent)
+
+        ls.setAcceptedTerms(false)
+
         finish()
     }
 
         accept_button.setOnClickListener {
-            val intent = Intent(this, NewContactActivity::class.java)
-            intent.putExtra("accept_terms", true)
-            startActivity(intent)
+
+            ls.setAcceptedTerms(true)
             finish()
         }
 

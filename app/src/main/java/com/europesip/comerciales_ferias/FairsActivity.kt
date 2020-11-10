@@ -43,6 +43,8 @@ class FairsActivity : AppCompatActivity() {
         fairsListView.adapter = FairsCustomAdapter(this)
 
 
+
+
          fairsListView.setOnItemClickListener { parent, view, position, id ->
              var selectedItem = parent.getItemAtPosition(position)
 

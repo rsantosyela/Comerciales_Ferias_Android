@@ -22,10 +22,32 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ProgressBar
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:indeterminate="true" />
+
+    </RelativeLayout>
+
+
+
     <ListView
         android:id="@+id/my_contacts_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
+
 
 
 </LinearLayout>

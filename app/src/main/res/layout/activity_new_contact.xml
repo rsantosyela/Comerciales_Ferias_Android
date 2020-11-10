@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewContactActivity">
+    tools:context=".NewContactActivity"
+    android:id="@+id/all">
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -21,6 +22,24 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ProgressBar
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:indeterminate="true" />
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/name_text_view"
@@ -69,7 +88,7 @@
     <EditText
         android:id="@+id/name_edit_text"
         android:layout_width="500sp"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
@@ -88,10 +107,10 @@
     <EditText
         android:id="@+id/email_edit_text"
         android:layout_width="500sp"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:textColor="@color/cardview_dark_background"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/email_text_view"
@@ -100,24 +119,14 @@
     <EditText
         android:id="@+id/phone_edit_text"
         android:layout_width="500sp"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/phone_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/phone_text_view" />
-
-    <EditText
-        android:id="@+id/fair_edit_text"
-        android:layout_width="500sp"
-        android:layout_height="45dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="@+id/fair_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/fair_text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/phone_text_view"
+        />
 
     <Button
         android:id="@+id/save_button"
@@ -125,6 +134,7 @@
         android:layout_height="85dp"
         android:layout_marginTop="60dp"
         android:text="GUARDAR"
+        android:inputType="phone"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -136,10 +146,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Acepto los términos y condiciones"
-        android:textSize="25sp"
         android:textColor="#4084F3"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fair_edit_text" />
+        app:layout_constraintTop_toBottomOf="@+id/fair_spinner" />
+
+    <Spinner
+        android:id="@+id/fair_spinner"
+        android:layout_width="500sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/fair_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/fair_text_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

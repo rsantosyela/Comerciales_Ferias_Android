@@ -24,22 +24,27 @@
 
     <Button
         android:id="@+id/my_contacts_button"
-        android:layout_width="300dp"
+
+        android:layout_width="250dp"
         android:layout_height="70sp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="32dp"
         android:text="MIS CONTACTOS"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/new_contact_button"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/new_contact_button" />
 
     <Button
         android:id="@+id/fairs_button"
-        android:layout_width="300dp"
+        android:layout_width="250dp"
         android:layout_height="70sp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
         android:text="FERIAS"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/new_contact_button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/new_contact_button" />
 
     <Button
