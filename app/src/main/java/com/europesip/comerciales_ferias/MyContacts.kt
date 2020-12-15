@@ -20,6 +20,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import kotlin.math.log
 
 class MyContacts : AppCompatActivity() {
 
@@ -33,6 +34,7 @@ class MyContacts : AppCompatActivity() {
     public lateinit var fairnames: Array<String>
     public lateinit var fairids: Array<String>
     public lateinit var mcontext: Context
+    public var canrefresh: Boolean = false;
 
 
 
@@ -62,10 +64,12 @@ class MyContacts : AppCompatActivity() {
 
         service = retrofit.create<ApiService>(ApiService::class.java)
         // Toolbar
+
+        var username = ls.getUser()[0];
         setSupportActionBar(findViewById(R.id.toolbar))
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowHomeEnabled(true)
-        supportActionBar!!.setTitle(intent.getStringExtra("title"))
+        supportActionBar!!.setTitle("Contactos de " + username);
 
         // Set on item click
         myContactsListView.setOnItemClickListener { parent, view, position, id ->
@@ -141,6 +145,7 @@ class MyContacts : AppCompatActivity() {
     fun setupdata(){
 
         cantouch(false)
+        canrefresh = false;
 
         service.getmyclients(ls.getToken()).enqueue(object : Callback<getmyclientsrs>{
             override fun onResponse(
@@ -159,13 +164,12 @@ class MyContacts : AppCompatActivity() {
 
                     setupadapter()
                     cantouch(true)
-
+                    canrefresh = true
 
 
                 } else if (response.code() == 401){
 
-                alerta("No hay ningún cliente creado por su usuario")
-                    //finish()
+                alerta_no_data()
 
                 } else {
 
@@ -201,11 +205,33 @@ class MyContacts : AppCompatActivity() {
 
     }
 
+    fun alerta_no_data(){
+
+        AlertDialog.Builder(mcontext).setTitle("Atención").setMessage("No hay ningún cliente creado por su usuario")
+            .setPositiveButton(
+                "Vale",
+                DialogInterface.OnClickListener { dialogInterface: DialogInterface, i: Int ->
+
+                    finish()
+
+                }).setCancelable(false).show()
+
+    }
+
     fun setupadapter(){
 
         // List view adapter
          myContactsListView.adapter = MyContactsCustomAdapter(mcontext,clientnames,clientemails,clientphones,fairnames)
 
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        if (canrefresh){
+            setupdata()
+        }
 
     }
 

@@ -56,7 +56,6 @@ class MenuActivity : AppCompatActivity() {
         //My contacts button click
         myContactsButton.setOnClickListener {
             val intent = Intent(this, MyContacts::class.java)
-            intent.putExtra("title", "Contactos de " + "Mac Pro")
             startActivity(intent)
         }
 
