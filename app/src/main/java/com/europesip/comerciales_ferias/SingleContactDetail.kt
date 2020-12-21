@@ -27,6 +27,14 @@ class SingleContactDetail : AppCompatActivity() {
     private lateinit var emailTextView: TextView
     private lateinit var phoneTextView: TextView
     private lateinit var fairTextView: TextView
+    private lateinit var nameTitle: TextView
+    private lateinit var emailTitle: TextView
+    private lateinit var phoneTitle: TextView
+    private lateinit var fairTitle: TextView
+    private lateinit var nameTitle2: TextView
+    private lateinit var emailTitle2: TextView
+    private lateinit var phoneTitle2: TextView
+    private lateinit var fairTitle2: TextView
     private lateinit var nameEditText: EditText
     private lateinit var emailEditText: EditText
     private lateinit var phoneEditText: EditText
@@ -77,6 +85,15 @@ class SingleContactDetail : AppCompatActivity() {
         emailEditText = findViewById(R.id.EmailEditText)
         phoneEditText = findViewById(R.id.PhoneEditText)
         fairSpinner = findViewById(R.id.FairsSpinner)
+
+        nameTitle = findViewById(R.id.textView)
+        emailTitle = findViewById(R.id.textView2)
+        phoneTitle = findViewById(R.id.textView3)
+        fairTitle = findViewById(R.id.textView4)
+        nameTitle2 = findViewById(R.id.textView5)
+        emailTitle2 = findViewById(R.id.textView6)
+        phoneTitle2 = findViewById(R.id.textView7)
+        fairTitle2 = findViewById(R.id.textView8)
 
          editbutton = findViewById(R.id.EditButton)
          deletebutton = findViewById(R.id.DeleteButton)
@@ -194,6 +211,17 @@ class SingleContactDetail : AppCompatActivity() {
             deletebutton.setTextColor(Color.parseColor("#000000"))
 
 
+            nameTitle.visibility = View.GONE
+            emailTitle.visibility = View.GONE
+            phoneTitle.visibility = View.GONE
+            fairTitle.visibility = View.GONE
+
+            nameTitle.isVisible = true
+            emailTitle2.isVisible = true
+            phoneTitle2.isVisible = true
+            fairTitle2.isVisible = true
+
+
 
         } else {
 
@@ -213,6 +241,16 @@ class SingleContactDetail : AppCompatActivity() {
 
             deletebutton.setText("ELIMINAR")
             deletebutton.setTextColor(Color.parseColor("#D32214"))
+
+            nameTitle.isVisible = true
+            emailTitle.isVisible = true
+            phoneTitle.isVisible = true
+            fairTitle.isVisible = true
+
+            nameTitle2.visibility = View.GONE
+            emailTitle2.visibility = View.GONE
+            phoneTitle2.visibility = View.GONE
+            fairTitle2.visibility = View.GONE
 
 
         }
@@ -299,7 +337,7 @@ class SingleContactDetail : AppCompatActivity() {
                     } else {
 
                         cantouch(true)
-                        alerta("Se ha producido un error, puede probar a cerrar sesión e iniciar sesión nuevamente")
+                        alerta("Error de autenticidad, por favor vuelva a intentarlo. Si el error persiste cierre sesión y vuelva a identificarse")
 
 
                     }                  }

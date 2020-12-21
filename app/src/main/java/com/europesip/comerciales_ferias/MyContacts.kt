@@ -173,11 +173,12 @@ class MyContacts : AppCompatActivity() {
 
                 } else {
 
-                    alerta("Error de autenticidad")
+                  //  alerta("Error de autenticidad")
 
-                    ls.removeToken()
-                    System.exit(0)
+                  //  ls.removeToken()
+                  //  System.exit(0)
 
+                    alerta("Error de autenticidad, por favor vuelva a intentarlo. Si el error persiste cierre sesión y vuelva a identificarse")
 
                 }
 

@@ -15,6 +15,13 @@ interface ApiService {
     @GET("getfairnames")
     fun getfairnames(@Header("token")token: String) : Call<GetFairNames>
 
+    @GET("getlegaltext")
+    fun getlegaltext(@Header("token")token: String) : Call<Message>
+
+
+    @GET("getfairsdata")
+    fun getfairsdata(@Header("token")token: String) : Call<GetFairsData>
+
     @FormUrlEncoded
     @POST("createclient")
     fun createclient(@Header("token") token: String , @Field("name") name: String, @Field("email") email: String, @Field("phone") phone: String, @Field("fairid") fairid: String) : Call<Message>
@@ -29,4 +36,10 @@ interface ApiService {
     @FormUrlEncoded
     @POST("updateclient")
     fun updateclient(@Header("token") token: String , @Field("clientid") clientid: String,  @Field("name") name: String,  @Field("email") email: String,  @Field("phone") phone: String, @Field("fairid") fairid: String) : Call<Message>
+
+    @FormUrlEncoded
+    @POST("getclientsbyfair")
+    fun getclientsbyfair(@Header("token") token: String , @Field("fairid") fairid: String): Call<getclientsbyfair>
+
+
 }

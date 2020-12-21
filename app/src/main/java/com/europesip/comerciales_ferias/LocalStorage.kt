@@ -156,5 +156,31 @@ class LocalStorage(private val context: Context) {
 
     }
 
+    public fun setFairid(farid: String){
+
+        val sharedPreferences: SharedPreferences = context.getSharedPreferences("activity_main", AppCompatActivity.MODE_PRIVATE)
+
+        val editor: SharedPreferences.Editor = sharedPreferences.edit()
+
+        editor.putString("fairid", farid)
+
+        editor.commit()
+
+
+    }
+
+    public fun getFairid(): String {
+
+        val sharedPreferences: SharedPreferences = context.getSharedPreferences("activity_main", AppCompatActivity.MODE_PRIVATE)
+
+        val editor: SharedPreferences.Editor = sharedPreferences.edit()
+
+        val fairid: String = sharedPreferences.getString("fairid","").toString()
+
+        return fairid
+
+
+    }
+
 
 }

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="pixel_c" />
+        <device id="Nexus 7" />
+        <device id="Nexus 9" />
+      </config>
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9beb1eb7-7f06-4ffa-8611-536d3bda1435" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/europesip/comerciales_ferias/ApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/europesip/comerciales_ferias/ApiService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/europesip/comerciales_ferias/FairsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/europesip/comerciales_ferias/FairsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/europesip/comerciales_ferias/LocalStorage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/europesip/comerciales_ferias/LocalStorage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/europesip/comerciales_ferias/MyContacts.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/europesip/comerciales_ferias/MyContacts.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/europesip/comerciales_ferias/NewContactActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/europesip/comerciales_ferias/NewContactActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/europesip/comerciales_ferias/SingleContactDetail.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/europesip/comerciales_ferias/SingleContactDetail.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/europesip/comerciales_ferias/TermsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/europesip/comerciales_ferias/TermsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_fairs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_fairs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_single_contact_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_single_contact_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_terms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_terms.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/contactslistsadapter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/contactslistsadapter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/row_fairs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/row_fairs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_10_API_22" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin File" />
+        <option value="layoutResourceFile" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iHMmEKQ9NnP3IjRMWLAIh9ZxRA" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_10_API_22" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-12-21T16:00:04.359Z" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.365871120">
+      <recent name="com.europesip.comerciales_ferias" />
+    </key>
+    <key name="android.template.-378196016">
+      <recent name="com.europesip.comerciales_ferias" />
+    </key>
+    <key name="android.template.-997774435">
+      <recent name="com.europesip.comerciales_ferias" />
+    </key>
+    <key name="android.template.-648573451">
+      <recent name="com.europesip.comerciales_ferias" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9beb1eb7-7f06-4ffa-8611-536d3bda1435" name="Default Changelist" comment="" />
+      <created>1601560220701</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601560220701</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Work in progress">
+      <created>1605029231396</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605029231396</updated>
+    </task>
+    <task id="LOCAL-00002" summary="version casi alfa">
+      <created>1608058323903</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608058323903</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Work in progress" />
+    <MESSAGE value="version casi alfa" />
+    <option name="LAST_COMMIT_MESSAGE" value="version casi alfa" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="496" y="197" key="#Project_Structure" timestamp="1601560235322">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state x="496" y="197" key="#Project_Structure/0.23.1792.1017@0.23.1792.1017" timestamp="1601560235322" />
+    <state x="589" y="164" key="#app" timestamp="1608113731772">
+      <screen x="0" y="23" width="1792" height="1004" />
+    </state>
+    <state x="589" y="164" key="#app/0.23.1792.1004@0.23.1792.1004" timestamp="1608113731772" />
+    <state x="675" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1608122756952">
+      <screen x="0" y="23" width="1792" height="1004" />
+    </state>
+    <state x="675" y="251" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1004@0.23.1792.1004" timestamp="1608122756952" />
+    <state x="675" y="252" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1008@0.23.1792.1008" timestamp="1605025200869" />
+    <state x="675" y="253" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1012@0.23.1792.1012" timestamp="1604592010478" />
+    <state x="675" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1017@0.23.1792.1017" timestamp="1601573256894" />
+    <state x="634" y="281" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605003800864">
+      <screen x="0" y="23" width="1792" height="1008" />
+    </state>
+    <state x="634" y="281" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1792.1008@0.23.1792.1008" timestamp="1605003800864" />
+    <state x="484" y="289" key="AndroidCreateResourceDirectoryDialog" timestamp="1604653789594">
+      <screen x="0" y="23" width="1792" height="1008" />
+    </state>
+    <state x="484" y="289" key="AndroidCreateResourceDirectoryDialog/0.23.1792.1008@0.23.1792.1008" timestamp="1604653789594" />
+    <state x="484" y="291" key="AndroidCreateResourceFileDialog" timestamp="1605002107925">
+      <screen x="0" y="23" width="1792" height="1008" />
+    </state>
+    <state x="484" y="291" key="AndroidCreateResourceFileDialog/0.23.1792.1008@0.23.1792.1008" timestamp="1605002107925" />
+    <state x="484" y="292" key="AndroidCreateResourceFileDialog/0.23.1792.1012@0.23.1792.1012" timestamp="1604595180894" />
+    <state x="484" y="293" key="AndroidCreateResourceFileDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1601622244025" />
+    <state x="395" y="133" key="CommitChangelistDialog2" timestamp="1608058323713">
+      <screen x="0" y="23" width="1792" height="1004" />
+    </state>
+    <state x="395" y="133" key="CommitChangelistDialog2/0.23.1792.1004@0.23.1792.1004" timestamp="1608058323713" />
+    <state x="395" y="133" key="CommitChangelistDialog2/0.23.1792.1008@0.23.1792.1008" timestamp="1605029231193" />
+    <state x="395" y="134" key="CommitChangelistDialog2/0.23.1792.1017@0.23.1792.1017" timestamp="1601630300183" />
+    <state width="1132" height="105" key="GridCell.Tab.0.bottom" timestamp="1608567051303">
+      <screen x="0" y="23" width="1792" height="1004" />
+    </state>
+    <state width="1132" height="105" key="GridCell.Tab.0.bottom/0.23.1792.1004@0.23.1792.1004" timestamp="1608567051303" />
+    <state width="947" height="169" key="GridCell.Tab.0.bottom/0.23.1792.1008@0.23.1792.1008" timestamp="1605023357633" />
+    <state width="957" height="172" key="GridCell.Tab.0.bottom/0.23.1792.1012@0.23.1792.1012" timestamp="1604511120311" />
+    <state width="1750" height="266" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1601630781045" />
+    <state width="1132" height="105" key="GridCell.Tab.0.center" timestamp="1608567051302">
+      <screen x="0" y="23" width="1792" height="1004" />
+    </state>
+    <state width="1132" height="105" key="GridCell.Tab.0.center/0.23.1792.1004@0.23.1792.1004" timestamp="1608567051302" />
+    <state width="947" height="169" key="GridCell.Tab.0.center/0.23.1792.1008@0.23.1792.1008" timestamp="1605023357633" />
+    <state width="957" height="172" key="GridCell.Tab.0.center/0.23.1792.1012@0.23.1792.1012" timestamp="1604511120310" />
+    <state width="1750" height="266" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1601630781045" />
+    <state width="1132" height="105" key="GridCell.Tab.0.left" timestamp="1608567051301">
+      <screen x="0" y="23" width="1792" height="1004" />
+    </state>
+    <state width="1132" height="105" key="GridCell.Tab.0.left/0.23.1792.1004@0.23.1792.1004" timestamp="1608567051301" />
+    <state width="947" height="169" key="GridCell.Tab.0.left/0.23.1792.1008@0.23.1792.1008" timestamp="1605023357633" />
+    <state width="957" height="172" key="GridCell.Tab.0.left/0.23.1792.1012@0.23.1792.1012" timestamp="1604511120310" />
+    <state width="1750" height="266" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1601630781044" />
+    <state width="1132" height="105" key="GridCell.Tab.0.right" timestamp="1608567051303">
+      <screen x="0" y="23" width="1792" height="1004" />
+    </state>
+    <state width="1132" height="105" key="GridCell.Tab.0.right/0.23.1792.1004@0.23.1792.1004" timestamp="1608567051303" />
+    <state width="947" height="169" key="GridCell.Tab.0.right/0.23.1792.1008@0.23.1792.1008" timestamp="1605023357633" />
+    <state width="957" height="172" key="GridCell.Tab.0.right/0.23.1792.1012@0.23.1792.1012" timestamp="1604511120311" />
+    <state width="1750" height="266" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1601630781045" />
+    <state x="496" y="266" key="Vcs.Push.Dialog.v2" timestamp="1608058327062">
+      <screen x="0" y="23" width="1792" height="1004" />
+    </state>
+    <state x="496" y="266" key="Vcs.Push.Dialog.v2/0.23.1792.1004@0.23.1792.1004" timestamp="1608058327062" />
+    <state x="496" y="267" key="Vcs.Push.Dialog.v2/0.23.1792.1008@0.23.1792.1008" timestamp="1605029237544" />
+    <state x="100" y="123" width="1592" height="804" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1608571614356">
+      <screen x="0" y="23" width="1792" height="1004" />
+    </state>
+    <state x="100" y="123" width="1592" height="804" key="com.android.tools.idea.avdmanager.AvdListDialog/0.23.1792.1004@0.23.1792.1004" timestamp="1608571614356" />
+    <state x="566" y="360" key="com.intellij.ide.util.TipDialog" timestamp="1608543955574">
+      <screen x="0" y="23" width="1792" height="1004" />
+    </state>
+    <state x="566" y="360" key="com.intellij.ide.util.TipDialog/0.23.1792.1004@0.23.1792.1004" timestamp="1608543955574" />
+    <state x="566" y="361" key="com.intellij.ide.util.TipDialog/0.23.1792.1008@0.23.1792.1008" timestamp="1604999971592" />
+    <state x="566" y="362" key="com.intellij.ide.util.TipDialog/0.23.1792.1012@0.23.1792.1012" timestamp="1604566066544" />
+    <state x="566" y="364" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1601630784635" />
+    <state x="676" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608058254711">
+      <screen x="0" y="23" width="1792" height="1004" />
+    </state>
+    <state x="676" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1004@0.23.1792.1004" timestamp="1608058254711" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1608222049800">
+      <screen x="0" y="23" width="1792" height="1004" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/0.23.1792.1004@0.23.1792.1004" timestamp="1608222049800" />
+    <state x="658" y="165" key="refactoring.ChangeSignatureDialog" timestamp="1605023511326">
+      <screen x="0" y="23" width="1792" height="1008" />
+    </state>
+    <state x="658" y="165" key="refactoring.ChangeSignatureDialog/0.23.1792.1008@0.23.1792.1008" timestamp="1605023511326" />
+    <state x="658" y="166" key="refactoring.ChangeSignatureDialog/0.23.1792.1012@0.23.1792.1012" timestamp="1604598190470" />
+    <state x="561" y="248" width="670" height="676" key="search.everywhere.popup" timestamp="1601629460400">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state x="561" y="248" width="670" height="676" key="search.everywhere.popup/0.23.1792.1017@0.23.1792.1017" timestamp="1601629460400" />
+  </component>
+</project>

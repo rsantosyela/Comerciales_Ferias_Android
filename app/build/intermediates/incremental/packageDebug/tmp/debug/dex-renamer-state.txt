@@ -1,0 +1,4 @@
+#Mon Dec 21 17:17:09 CET 2020
+base.0=/Users/diegosanchez/Desktop/proyectos/europesip/android3/Comerciales_Ferias_Android/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

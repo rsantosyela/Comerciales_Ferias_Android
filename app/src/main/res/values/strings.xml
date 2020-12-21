@@ -1,7 +1,7 @@
 <resources>
 
 
-    <string name="base_url_api"> http://9172f2f53c45.ngrok.io/api/user/</string>
+    <string name="base_url_api">http://1a2b161222e4.ngrok.io/api/user/</string>
 
     <string name="app_name">Comerciales_Ferias</string>
     <string name="title_activity_my_contacts">MyContacts</string>

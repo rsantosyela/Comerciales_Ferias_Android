@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
@@ -302,6 +303,8 @@ class NewContactActivity : AppCompatActivity() {
             object : Callback<Message> {
                 override fun onResponse(call: Call<Message>, response: Response<Message>) {
 
+                    Log.d("asdf", "" + response.code());
+
                     if (response.code() == 200) {
 
                         canclick(true)
@@ -309,8 +312,6 @@ class NewContactActivity : AppCompatActivity() {
                         nameEditText.setText("")
                         emailEditText.setText("")
                         phoneEditText.setText("")
-                        fairSpinner.setSelection(0)
-                        selected = 0
 
                         ls.setAcceptedTerms(false)
                         termsCheckBox.isChecked = false
@@ -321,7 +322,7 @@ class NewContactActivity : AppCompatActivity() {
                     } else {
 
                         canclick(true)
-                        alerta("Se ha producido un error, puede probar a cerrar sesión e iniciar sesión nuevamente")
+                        alerta("Error de autenticidad, por favor vuelva a intentarlo. Si el error persiste cierre sesión y vuelva a identificarse")
 
 
                     }
